@@ -21,7 +21,7 @@ Hide ratings, names/usernames, and profile pictures on **Chess.com** so you can 
 
 ## Screenshots
 
-![Default View](images/defaultView.png)
+![Default View](examples/defaultView.png)
 ![Focus Mode View](examples/focusMode.png)
 
 ---
