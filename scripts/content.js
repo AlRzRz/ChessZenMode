@@ -1,5 +1,4 @@
-// [ ] Add icon 32 and icon 16 images
-// [ ] Remove background from icon images
+
 // [ ] Instead of hiding taglines, have a way to render 'Opponent' or 'User' instead.
 
 
