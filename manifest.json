@@ -1,6 +1,6 @@
 {
   "name": "Chess Zen Mode",
-  "description": "Hide ratings, names, and profile pictures during your Chess.com games.",
+  "description": "Hide ratings, names, and profile pictures during your Chess.com games. (Unofficial)",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
