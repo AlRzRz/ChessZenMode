@@ -14,8 +14,10 @@
     {
       "js": ["scripts/content.js"],
       "matches": [
-        "https://www.chess.com/play/*"
-      ]
+        "https://www.chess.com/play/online/*",
+        "https://www.chess.com/game/*"
+      ],
+      "run_at": "document_idle"
     }
   ]
 }
