@@ -1,8 +1,12 @@
 // [ ] Add icon 32 and icon 16 images
 // [ ] Remove background from icon images
+// [ ] Instead of hiding taglines, have a way to render 'Opponent' or 'User' instead.
+
+
 
 // https://www.chess.com/play/
 // https://www.chess.com/play/*
+// https://www.chess.com/game/*
 
 // #board-layout-player-top > div.player-component.player-top (The Opponent)
 // #board-layout-player-bottom > div.player-component.player-bottom (The User)
@@ -13,36 +17,44 @@
 // Avatar img div: #board-layout-player-top > div.player-component.player-top > div.player-avatar > div > img
 // Standardized Avatar: https://www.chess.com/bundles/web/images/black_400.png
 
-
-// [ ] Current Implementation: Hide taglines and standardize player avatars
-// [ ] Instead of hiding taglines, have a way to render 'Opponent' or 'User' instead.
+// .player-row-top .cc-avatar-component
 
 
+function hideMainDetails(document) {
 
-function hideMainDetails(documentElement) {
 
-    // [x] GET PLAYER ELEMENT TAGLINES, LOOP OVER THEM AND SET THEIR VISIBILITY TO HIDDEN
-
-    let taglines = documentElement.querySelectorAll('div.player-tagline');
-    taglines.forEach(tagline => {
+    try {
+        let taglines = document.querySelectorAll('div.player-tagline');
+        taglines.forEach(tagline => {
         tagline.style.visibility = 'hidden';
-    });
-
-
-    // [ ] GET PLAYER AVATARS AND CHANGE THEIR PICTURES TO A STANDARDIZED PICTURE (either get its parent container, empty it, and add a simple image)
-
-    const STANDARDIZED_IMAGE_ELEMENT = '<img class="cc-avatar-img" loading="lazy" src="https://www.chess.com/bundles/web/images/black_400.png" srcset="https://www.chess.com/bundles/web/images/black_400.png 1x, https://www.chess.com/bundles/web/images/black_400@2x.png 2x" alt="Avatar of Opponent" height="40" width="40"></img>'
-    let opponentImageDiv = document.querySelector('#board-layout-player-top > div.player-component.player-top > div.player-avatar > div');
-    opponentImageDiv.innerHTML = STANDARDIZED_IMAGE_ELEMENT;
-
-
+        });    
+    } catch (error) {
+        console.error(`An error occurred whilst trying to fetch player element taglines.\nERROR: ${error}`);
+    }
+    
+    // const STANDARDIZED_IMAGE_ELEMENT = `<img class="cc-avatar-img" loading="lazy" src="https://www.chess.com/bundles/web/images/black_400.png" srcset="https://www.chess.com/bundles/web/images/black_400.png 1x, https://www.chess.com/bundles/web/images/black_400@2x.png 2x" alt="Avatar of Opponent" height="40" width="40"></img>`;
+    try {
+        let opponentImageDiv = document.querySelector('#board-layout-player-top .player-avatar');
+        opponentImageDiv.style.visibility = 'hidden';
+        
+        // Below is the code to set the images to a standardized profile picture (you also have to uncomment the STANDARDIZED_IMAGE_ELEMENT constant above)
+        // [ ] Make the standardized image element adaptive (as when you select 'Focus Mode' the image resizes to a bigger version but does not collapse back to its original size when you leave focus mode)
+        // opponentImageDiv.innerHTML = STANDARDIZED_IMAGE_ELEMENT;
+        
+    } catch (error) {
+        console.error(`An error occurred whilst trying to change/remove player pictures.\nERORR: ${error}`)
+    }
 
 }
 
 
-const main = (documentElement) => {
-    hideMainDetails(documentElement)
+const main = (document, window) => {
+    
+    window.addEventListener('load', () => {
+        hideMainDetails(document)
+
+    }, {once: true});
 }
 
 
-main(document)
+main(document, window)
