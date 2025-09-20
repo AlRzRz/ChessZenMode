@@ -29,7 +29,7 @@ Hide ratings, names/usernames, and profile pictures on **Chess.com** so you can 
 ## Install
 
 ### From the Chrome Web Store
-- **LINK COMING SOON**
+- **[CHROME EXTENSION LINK](https://chromewebstore.google.com/detail/chess-zen-mode/fnopdpaobdgfhjcbghjnidodgmjdbael)**
 
 ### Local (for development)
 1. Clone this repo.
