@@ -1,5 +1,7 @@
 # Chess Zen Mode (Unofficial)
 
+![Banner](examples/MainChessZenModePage.png)
+
 Hide ratings, names/usernames, and profile pictures on **Chess.com** so you can focus purely on the board.
 
 *[Link to the Chrome Extension Store](https://chromewebstore.google.com/detail/chess-zen-mode/fnopdpaobdgfhjcbghjnidodgmjdbael)*
@@ -23,8 +25,8 @@ Hide ratings, names/usernames, and profile pictures on **Chess.com** so you can 
 
 ## Screenshots
 
-![Banner](examples/MainChessZenModePage.png)
 ![Before](examples/CZMBefore.png)
+
 ![After](examples/CZMAfter.png)
 
 ---
