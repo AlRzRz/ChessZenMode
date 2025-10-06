@@ -1,5 +1,6 @@
 
 // [ ] Instead of hiding taglines, have a way to render 'Opponent' or 'User' instead.
+// [ ] Change name to NoElo
 
 
 
