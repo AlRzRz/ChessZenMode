@@ -2,6 +2,8 @@
 
 Hide ratings, names/usernames, and profile pictures on **Chess.com** so you can focus purely on the board.
 
+*[Link to the Chrome Extension Store](https://chromewebstore.google.com/detail/chess-zen-mode/fnopdpaobdgfhjcbghjnidodgmjdbael)*
+
 [![Manifest](https://img.shields.io/badge/Chrome%20Extension-MV3-informational)](#)
 [![Privacy](https://img.shields.io/badge/Privacy-no%20data%20collected-brightgreen)](#)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
@@ -27,9 +29,6 @@ Hide ratings, names/usernames, and profile pictures on **Chess.com** so you can 
 ---
 
 ## Install
-
-### From the Chrome Web Store
-- **LINK COMING SOON**
 
 ### Local (for development)
 1. Clone this repo.
