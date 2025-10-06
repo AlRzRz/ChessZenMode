@@ -35,6 +35,9 @@ function hideMainDetails(document) {
     try {
         let opponentImageDiv = document.querySelector('#board-layout-player-top .player-avatar');
         opponentImageDiv.style.visibility = 'hidden';
+
+        let userImageDiv = document.querySelector('#board-layout-player-bottom .player-avatar');
+        userImageDiv.style.visibility = 'hidden';
         
         // Below is the code to set the images to a standardized profile picture (you also have to uncomment the STANDARDIZED_IMAGE_ELEMENT constant above)
         // [ ] Make the standardized image element adaptive (as when you select 'Focus Mode' the image resizes to a bigger version but does not collapse back to its original size when you leave focus mode)
